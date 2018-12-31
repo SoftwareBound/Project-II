@@ -2,19 +2,27 @@ from FilteredTwitsBuilder import FilteredTwitsBuilder
 import pymysql
 
 class DBPharser():
-	def __init__(self,twits_list):
-		self._twits_list_to_DB = twits_list
+	def __init__(self):
+		#self._twits_list_to_DB = twits_list
 		self._db = None
 		self._cursor = None
 	
 	def ConnectToDB(self):
 		try:
 			self._db = pymysql.connect(host = "localhost", user = "root",
-								 passwd = "root", database = "twitsdb")
+								 passwd = "10203040", database = "twit")
 		except Exception:
 			print("Error in MySQL connection")
 
-		self.InsertQuery()
+		#self.InsertQuery()
+
+	def SelectQuery(self, statement,args):
+		self._cursor = self._db.cursor()
+		self._cursor.execute(statement, args)
+		result = self._cursor.fetchall()
+		return result
+
+
 			
 
 	def InsertQuery(self):

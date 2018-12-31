@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Prediction.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DictionaryPharser.py">
       <SubType>Code</SubType>
     </Compile>
