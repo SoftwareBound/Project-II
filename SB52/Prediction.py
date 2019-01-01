@@ -2,12 +2,7 @@ from DBPharser import DBPharser
 
 
 #will be in the gui controller
-real_score = [
-	('qt1', 'eagles'),
-	('qt2', 'eagles'),
-	('qt3', 'eagles'),
-	('qt4', 'eagles'),
-	]
+
 
 
 
